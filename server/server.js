@@ -14,5 +14,9 @@ io.on('connection', function(socket){
     socket.on('move', function(data){
        console.log('client moved');
     });
+    socket.on('disconnect', function(data){
+        playerCount--;
+        console.log('Player count '+playerCount);
+    })
 
 })
